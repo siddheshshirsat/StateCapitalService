@@ -20,6 +20,6 @@ public class GetStateCapitalHandlerTest {
 		String result = getStateCapitalHandler.handleGetStateCapital(state);
 		
 		// Assert
-		Assert.assertEquals("Olympia1", result);
+		Assert.assertEquals("Olympia", result);
 	}
 }
