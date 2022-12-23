@@ -25,7 +25,8 @@ public class GetStateCapitalControllerTest {
 		// Arrange
 		Mockito.when(getStateCapitalHandler.handleGetStateCapital(Mockito.anyString())).thenReturn("testCapital");
 		String state = "testState";
-		GetStateCapitalRequest request = new GetStateCapitalRequest(state);
+		GetStateCapitalRequest request = new GetStateCapitalRequest();
+		request.setState(state);
 
 		// Act
 		GetStateCapitalResponse result = getStateCapitalController.getStateCapital(request);
