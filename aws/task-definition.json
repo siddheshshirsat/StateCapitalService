@@ -24,7 +24,7 @@
       ],
       "command": [],
       "linuxParameters": null,
-      "cpu": 1024,
+      "cpu": 0,
       "environment": [],
       "resourceRequirements": null,
       "ulimits": null,
@@ -34,10 +34,10 @@
       "secrets": null,
       "dockerSecurityOptions": null,
       "memory": null,
-      "memoryReservation": 2048,
+      "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "tomcat",
+      "image": "311242216947.dkr.ecr.us-east-2.amazonaws.com/state-capital-service-repo:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -54,17 +54,17 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "tomcat-webserver"
+      "name": "state-capital-service-container"
     }
   ],
   "placementConstraints": [],
-  "memory": "2048",
+  "memory": "512",
   "taskRoleArn": null,
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:311242216947:task-definition/state-capital-service-task-definition:1",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:311242216947:task-definition/state-capital-service-task-definition:3",
   "family": "state-capital-service-task-definition",
   "requiresAttributes": [
     {
@@ -83,13 +83,19 @@
       "targetId": null,
       "targetType": null,
       "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
     },
     {
       "targetId": null,
       "targetType": null,
       "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+      "name": "ecs.capability.execution-role-ecr-pull"
     },
     {
       "targetId": null,
@@ -110,8 +116,8 @@
   ],
   "networkMode": "awsvpc",
   "runtimePlatform": null,
-  "cpu": "1024",
-  "revision": 1,
+  "cpu": "256",
+  "revision": 3,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
