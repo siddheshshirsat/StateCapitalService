@@ -36,7 +36,7 @@ env:
   ECS_SERVICE: state-capital-service
   ECS_CLUSTER: state-capital-service-cluster-2
   ECS_TASK_DEFINITION: aws/task-definition.json
-  CONTAINER_NAME: tomcat-webserver
+  CONTAINER_NAME: state-capital-service-container
 
 permissions:
   contents: read
