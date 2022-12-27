@@ -34,7 +34,7 @@ env:
   AWS_REGION: us-east-2
   ECR_REPOSITORY: state-capital-service-repo
   ECS_SERVICE: state-capital-service
-  ECS_CLUSTER: state-capital-service-cluster-2
+  ECS_CLUSTER: state-capital-service-cluster-3
   ECS_TASK_DEFINITION: aws/task-definition.json
   CONTAINER_NAME: state-capital-service-container
 
