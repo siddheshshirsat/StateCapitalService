@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/state-capital-service-task-definition",
+          "awslogs-group": "/ecs/state-capital-service-task-definition-4",
           "awslogs-region": "us-east-2",
           "awslogs-stream-prefix": "ecs"
         }
@@ -17,9 +17,24 @@
       "entryPoint": [],
       "portMappings": [
         {
-          "hostPort": 8080,
+          "hostPort": 9000,
           "protocol": "tcp",
-          "containerPort": 8080
+          "containerPort": 9000
+        },
+        {
+          "hostPort": 22,
+          "protocol": "tcp",
+          "containerPort": 22
+        },
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 80
+        },
+        {
+          "hostPort": 443,
+          "protocol": "tcp",
+          "containerPort": 443
         }
       ],
       "command": [],
@@ -54,7 +69,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "state-capital-service-container"
+      "name": "state-capital-service-container-4"
     }
   ],
   "placementConstraints": [],
@@ -64,8 +79,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:311242216947:task-definition/state-capital-service-task-definition:3",
-  "family": "state-capital-service-task-definition",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:311242216947:task-definition/state-capital-service-task-definition-4:1",
+  "family": "state-capital-service-task-definition-4",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -117,7 +132,7 @@
   "networkMode": "awsvpc",
   "runtimePlatform": null,
   "cpu": "256",
-  "revision": 3,
+  "revision": 1,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
