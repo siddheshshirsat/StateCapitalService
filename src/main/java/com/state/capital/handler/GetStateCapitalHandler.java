@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class GetStateCapitalHandler {
 	public String handleGetStateCapital(String state) {
-		return "Olympia";
+		return "Salem";
 	}
 }
